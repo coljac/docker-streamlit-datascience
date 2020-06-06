@@ -6,10 +6,16 @@ Based on [ideonate/streamlit-single](https://hub.docker.com/r/ideonate/streamlit
 
 Build like so:
 
-`docker build -t streamlitds .`
+`docker build -t coljac/streamlit_ds:latest .`
 
 Invoke like so:
 
-`docker run -p 8888:8888 -v /path/to/runnable/script:/app streamlitds`
+`docker run -p 8888:8888 -v /path/to/dir/with/script:/app streamlit_ds`
 
 Streamlit will be available on port 8888 on localhost.
+
+## Other stuff
+
+- `data/`, `app/`; test streamlit application.
+- `create_vm.sh`: Assuming azure-cli is installed and running, spins up a (spot) VM and deploys an application using docker.
+- `run.sh`: Starts the app running.
